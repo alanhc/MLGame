@@ -17,6 +17,11 @@ class MLPlay:
         if (scene_info["status"] == "GAME_OVER" or
             scene_info["status"] == "GAME_PASS"):
             return "RESET"
+        ball_x = scene_info['ball'][0]
+        ball_y = scene_info['ball'][1]
+        platform_x = scene_info['platform'][0]
+        if ball_x > platform_x:
+            command = "MOVE_RIGHT"
 
         if not self.ball_served:
             self.ball_served = True

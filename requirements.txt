@@ -1,1 +1,4 @@
 pygame==1.9.6
+scikit-learn==0.22.2
+matplotlib==3.2.1
+jupyter==1.0.0
